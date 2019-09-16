@@ -1,0 +1,199 @@
+body {
+
+  background: linear-gradient(to bottom, #0096a5 11.5vw, #e0e0e0 5vw);
+}
+#myBtn {
+    display: none;/* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 2.5vw; /* Place the button at the bottom of the page */
+    right: 3.5vw; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border-radius: 999em; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #d32f2f; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 0px; /* Some padding */
+    font-size: 1.5vw; /* Increase font size */
+    width: 3vw;
+    height: 3vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border: 0px;
+    fill: white;
+}
+@media screen and (max-width: 1024px) {
+  #myBtn {
+    bottom: 5vw;
+    right: 5vw;
+    width: 10vw;
+    height: 10vw;
+  }
+}
+#myBtn:hover {
+    background-color: #ba2d65; /* Add a dark-grey background on hover */
+    color: white;
+    border: 0px;
+    transition: .3s ease;
+}
+#titel {
+  font-size: 6.6vw;
+  font-family: 'Pacifico';
+  font-weight: 200;
+  margin-left: 1.2vw;
+  margin-top: -1vw;
+}
+.responsiveSite{
+    margin-top: 2.5vw;
+    text-align: center;
+    min-height: 100%;
+}
+.responsiveContent{
+    display: inline-block;
+    background-color: white;
+    width: 92vw;
+    height:auto;
+    margin-bottom: 2vw;
+    text-align: left;
+    padding-bottom: 2vw;
+    border-radius: 2px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+@media screen and (max-width: 1024px) {
+  .responsiveContent{
+    width: 94vw;
+    margin-bottom: 3.5vw;
+
+    box-shadow: 0 1px 2px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+}
+.adventskalendar{
+    display: inline-block;
+    width: 92vw;
+    margin: auto;
+    width: 82%;
+    padding-bottom: 2vw;
+}
+.contentBox{
+    margin-left: 3vw;
+    margin-right: 3vw;
+    font-family: 'Roboto';
+    font-size: 1.4vw;
+}
+@media screen and (max-width: 1024px) {
+  .contentBox {
+    font-size: 4vw;
+    margin-top: 3vw;
+    margin-left: 6vw;
+    margin-right: 6vw;
+  }
+}
+.titel{
+  font-family: 'Indie Flower';
+  margin-left: 3vw;
+  margin-top: 2vw;
+  font-size: 3.3vw;
+}
+@media screen and (max-width: 1024px) {
+  .titel {
+    font-size: 7vw;
+    margin-top: 2vw;
+    margin-left: 6vw;
+    font-weight: 400;
+  }
+}
+*, html {
+  padding:0;
+  margin:0;
+}
+
+#copyright{
+  width: 16vw;
+}
+.impressum{
+  margin-left: 4.3vw;
+  margin-bottom: 2vw;
+  margin-top: 2.5vw;
+  font-size: 1.1vw;
+  float: left;
+  font-family: 'Roboto';
+}
+@media screen and (max-width: 1024px) {
+  .impressum{
+    font-size: 3.5vw;
+  }
+}
+#impTitel{
+      color: #7b1fa2;
+      font-size: 2vw;
+}
+@media screen and (max-width: 1024px) {
+    #impTitel{
+    font-size: 6vw;
+    font-weight: 400;
+  }
+}
+#impMail{
+    color: #ae52d4;
+    font-size: 1.1vw;
+}
+@media screen and (max-width: 1024px) {
+  #impMail{
+    font-size: 3.5vw;
+    font-weight: 400;
+  }
+}
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  margin-top: 2vw;
+  margin-left: 2vw;
+  float:left;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  font-family: 'Mountains Of Christmas';
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+  font-size: 1.4vw;
+}
+
+#logout{
+  float: right;
+  top: 2vw;
+  left: 2vw;
+}
