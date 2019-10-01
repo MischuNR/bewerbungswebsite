@@ -5,16 +5,18 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
     if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
         document.getElementById("myBtn").style.display = "block";
+      //  document.getElementById("navbar").classList.remove("bg-transparent");
     } else {
-
         document.getElementById("myBtn").style.display = "none";
+      //  document.getElementById("navbar").classList.add("bg-transparent");
     }
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
+function scroll(x) {
+  behavior: "smooth";
+  document.getElementById(x).scrollIntoView();
+  window.scrollBy(0, - 120);
 }
 
 function readMoreLess1() {
@@ -64,15 +66,3 @@ function readMoreLess3() {
     moreText.style.display = "inline";
   }
 }
-
-function collabseMenu() {
-    var x = document.getElementById("linkbox");
-    if (x.className === "linkbox") {
-        x.className += " responsive";
-        x.style.marginRight = "0px";
-        document.getElementById("iconResponsive").style.paddingTop = "-2px";
-    } else {
-        x.className = "linkbox";
-        x.style.marginTop = "0px";
-    }
-  }
