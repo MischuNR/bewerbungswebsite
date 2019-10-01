@@ -48,7 +48,7 @@ session_start(); ?>
 <main>
 <div data-spy="scroll" data-target="#navbar" data-offset="0" class="container mt-5">
   <div class="row text-center">
-    <img src="Images/pb.jpg" class="mx-auto d-block mt-5 img-responsive rounded-circle" style="max-height: 250px; max-width: 250px;"/>
+    <img src="Images/pb.jpg" class="mx-auto d-block mt-5 img-responsive rounded-circle shadow my-5" style="max-height: 250px; max-width: 250px;"/>
 
   </div>
   <div class="card border-0 shadow my-5">
