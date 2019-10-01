@@ -71,7 +71,7 @@ session_start(); ?>
 
   <div class="card border-0 shadow my-5">
     <div class="card-body p-5" id="computerScience">
-      <h1 class="font-weight-light">Informatikkenntnisse</h1>
+      <h1 class="font-weight-light">Informatik</h1>
       <p class="lead">Ich mag Informatik.</p>
       <p class="lead">Informatik ist toll.</p>
       <button class="btn btn-outline-warning btn-sm" data-toggle="collapse" data-target="#computerScienceMore">Mehr Informationen</button>
