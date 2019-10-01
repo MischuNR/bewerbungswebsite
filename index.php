@@ -16,7 +16,7 @@ session_start(); ?>
   <title>Michel Noël Rohrbach</title>
 </head>
 
-<body name="Top" data-spy="scroll" data-target=".navbar" data-offset="50">
+<body name="Top" data-spy="scroll" data-target=".navbar" data-offset="250">
   <header>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-warning smooth-scroll" id="navbar">
   <div class="container-fluid">
@@ -106,7 +106,7 @@ session_start(); ?>
     <div class="card-body p-5" id="grades">
       <h1 class="font-weight-light">Zeugnisse und Diplome</h1>
       <?php
-      if(!isset($_SESSION["ZugriffZeugnisse"])) {
+      if(!isset($_SESSION["AccessGrades"])) {
         echo '
 
         <p class="lead">
@@ -116,11 +116,11 @@ session_start(); ?>
         <form action="login.php" method="post">
         <div class="form-group">
                              <label>Nummer</label>
-                             <input type="text" class="form-control" placeholder="Nummer" name="nummer">
+                             <input type="text" class="form-control" placeholder="Nummer" name="numberLogin">
         </div>
                           <div class="form-group">
                              <label>Password</label>
-                             <input type="password" class="form-control" placeholder="Passwort" name="passwort">
+                             <input type="password" class="form-control" placeholder="Passwort" name="passwordLogin">
         </div>
                           <button type="submit" class="btn btn-warning">Login</button>
         </form>
@@ -145,9 +145,6 @@ session_start(); ?>
         <br/>
         <a href="Auszeichnungen/Diplome/Englisch_B1.pdf" target="_blank" class="btn btn-link" role="button">Englisch</a>
 
-        <br>
-        <br>
-        Sie wollen sich ausloggen? Drücken Sie den Button!
         </p>
         <a href="logout.php"><button class="btn btn-warning">Ausloggen</button></a>';
       }
@@ -501,7 +498,7 @@ Hier finden Sie alle spannenden Informationen zu meiner Person, meine Informatik
                   // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
                   $('html, body').animate({
                       scrollTop: $(hash).offset().top - 120
-                  }, 300, function () {
+                  }, 250, function () {
 
                       // Add hash (#) to URL when done scrolling (default click behavior)
                       window.location.hash = hash;

@@ -1,12 +1,12 @@
 <?php
 
-$nummer = $_POST['nummer'];
-$passwort = $_POST['passwort'];
+$number = $_POST['numberLogin'];
+$password = $_POST['passwordLogin'];
 
-if($nummer == "131213" && $passwort == "11235234")
+if($number == "131213" && $password == "11235234")
 {
   session_start();
-  $_SESSION['ZugriffZeugnisse'] = "Wahr";
+  $_SESSION['AccessGrades'] = "true";
   header('Location:index.php#grades');
 }
 
