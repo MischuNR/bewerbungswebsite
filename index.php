@@ -21,7 +21,7 @@ session_start(); ?>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-warning smooth-scroll" id="navbar">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-          <h2 class="text-uppercase">Michel Noël Rohrbach</h2>
+          <h2 class="text-uppercase">Michel Rohrbach</h2>
           <h6>Schüler Informatikmittelschule Bern</h6>
         </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
