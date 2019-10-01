@@ -18,7 +18,7 @@ session_start(); ?>
 
 <body name="Top" data-spy="scroll" data-target=".navbar" data-offset="250">
   <header>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-warning smooth-scroll" id="navbar">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark smooth-scroll" id="navbar">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
           <h3 class="text-uppercase">Michel Rohrbach</h3>
@@ -507,6 +507,14 @@ Hier finden Sie alle spannenden Informationen zu meiner Person, meine Informatik
           });
       })
   </script>
+  <script>
+  $(function () {
+  $(document).scroll(function () {
+    var $nav = $(".navbar");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > 220);
+  });
+});
+</script>
 </body>
 
 </html>

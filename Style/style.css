@@ -81,7 +81,10 @@ footer{
   position: inherit;
 }
 
-
+.navbar.scrolled {
+  background-color: #ffc107 !important;
+  transition: background-color 200ms linear;
+}
 
 
 /* https://material.io/tools/color/#!/?view.left=1&view.right=0&primary.color=1565C0&secondary.color=D32F2F
