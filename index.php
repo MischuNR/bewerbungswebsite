@@ -8,6 +8,7 @@ session_start(); ?>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="script.js"></script>
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,10 +17,11 @@ session_start(); ?>
 </head>
 
 <body name="Top" data-spy="scroll" data-target=".navbar" data-offset="50">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-warning fixed-top" id="navbar">
+  <header>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-warning smooth-scroll" id="navbar">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-          <h2>Michel Noël Rohrbach</h2>
+          <h2 class="text-uppercase">Michel Noël Rohrbach</h2>
           <h6>Schüler Informatikmittelschule Bern</h6>
         </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,24 +29,26 @@ session_start(); ?>
         </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-          <a class="nav-link" href="#aboutMe">Über mich</a>
+          <a class="nav-link text-uppercase" onclick="scroll(aboutMe)" href="#aboutMe">Über mich</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#computerScience">Informatikkenntnisse</a>
+          <a class="nav-link text-uppercase" href="#computerScience">Informatikkenntnisse</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#projects">Projekte</a>
+          <a class="nav-link text-uppercase" href="#projects">Projekte</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#grades">Zeugnisse und Diplome</a>
+          <a class="nav-link text-uppercase" href="#grades">Zeugnisse und Diplome</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+</header>
+<main>
 <div data-spy="scroll" data-target="#navbar" data-offset="0" class="container mt-5">
   <div class="row text-center">
-    <img src="images/default.jpg" class="mx-auto d-block mt-5"/>
+    <img src="Images/pb.jpg" class="mx-auto d-block mt-5 img-responsive rounded-circle" style="max-height: 250px; max-width: 250px;"/>
 
   </div>
   <div class="card border-0 shadow my-5">
@@ -55,6 +59,7 @@ session_start(); ?>
 
     </div>
   </div>
+
   <div class="card border-0 shadow my-5">
     <div class="card-body p-5" id="aboutMe">
       <h1 class="font-weight-light">Über mich</h1>
@@ -81,6 +86,7 @@ session_start(); ?>
       </div>
 
     </div>
+
   </div>
 
   <div class="card border-0 shadow my-5">
@@ -150,6 +156,7 @@ session_start(); ?>
 
     </div>
   </div>
+</main>
 <!-- </div>
   <div class="responsiveSite">
 
@@ -473,6 +480,36 @@ Hier finden Sie alle spannenden Informationen zu meiner Person, meine Informatik
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script>
+      $(document).ready(function () {
+          // Initialize Tooltip
+          $('[data-toggle="tooltip"]').tooltip();
+
+          // Add smooth scrolling to all links in navbar + footer link
+          $(".navbar a").on('click', function (event) {
+
+              // Make sure this.hash has a value before overriding default behavior
+              if (this.hash !== "") {
+
+                  // Prevent default anchor click behavior
+                  event.preventDefault();
+
+                  // Store hash
+                  var hash = this.hash;
+
+                  // Using jQuery's animate() method to add smooth page scroll
+                  // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                  $('html, body').animate({
+                      scrollTop: $(hash).offset().top - 120
+                  }, 300, function () {
+
+                      // Add hash (#) to URL when done scrolling (default click behavior)
+                      window.location.hash = hash;
+                  });
+              } // End if
+          });
+      })
+  </script>
 </body>
 
 </html>
