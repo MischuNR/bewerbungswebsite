@@ -28,9 +28,9 @@ else {
   <br/>
   Zeugnisse:
   <br />
-  <a href="Items/Grades/GIBB_Zeugnis.pdf" target="_blank" class="btn btn-link" role="button">gibb</a>
+  <a href="Items/Grades/Gibb_Zeugnis.pdf" target="_blank" class="btn btn-link" role="button">gibb</a>
   <br />
-  <a href="Items/Grades/BWD_Zeugnis.pdf" target="_blank" class="btn btn-link" role="button">bwd</a>
+  <a href="Items/Grades/Bwd_Zeugnis.pdf" target="_blank" class="btn btn-link" role="button">bwd</a>
   <br />
   <br />
   Diplome und Bestätigungen:
